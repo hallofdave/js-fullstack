@@ -10,7 +10,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use("/api/places", placesRoutes); // => /api/places...
+app.use("/api/places", placesRoutes);
 app.use("/api/users", usersRoutes);
 
 app.use((req, res, next) => {
@@ -28,7 +28,7 @@ app.use((error, req, res, next) => {
 
 mongoose
    .connect(
-      "mongodb+srv://halljdave:r9h4CqbFNfZjsAul@cluster0.nluxlcs.mongodb.net/places?retryWrites=true&w=majority"
+      "mongodb+srv://halljdave:r9h4CqbFNfZjsAul@cluster0.nluxlcs.mongodb.net/mern?retryWrites=true&w=majority"
    )
    .then(() => {
       app.listen(5000);
