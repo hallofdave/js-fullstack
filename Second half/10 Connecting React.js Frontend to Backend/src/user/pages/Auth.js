@@ -5,7 +5,6 @@ import Input from "../../shared/components/FormElements/Input";
 import Button from "../../shared/components/FormElements/Button";
 import ErrorModal from "../../shared/components/UIElements/ErrorModal";
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner";
-
 import {
    VALIDATOR_EMAIL,
    VALIDATOR_MINLENGTH,
@@ -87,9 +86,8 @@ const Auth = () => {
             setIsLoading(false);
             auth.login();
          } catch (err) {
-            console.log(err);
             setIsLoading(false);
-            setError(err.message || "Something went wrong please try again.");
+            setError(err.message || "Something went wrong, please try again.");
          }
       } else {
          try {
@@ -115,9 +113,8 @@ const Auth = () => {
             setIsLoading(false);
             auth.login();
          } catch (err) {
-            console.log(err);
             setIsLoading(false);
-            setError(err.message || "Something went wrong please try again.");
+            setError(err.message || "Something went wrong, please try again.");
          }
       }
    };
